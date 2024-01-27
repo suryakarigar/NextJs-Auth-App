@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation"; //To forcefully send the user to profile page
-import { Axios } from "axios";
+import axios from "axios";
 
 
 
