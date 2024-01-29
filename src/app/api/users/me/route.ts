@@ -2,7 +2,6 @@ import { getDataFromToken } from "@/helpers/getDataFromToken";
 import { NextRequest, NextResponse } from "next/server";
 import User from "@/models/userModel";
 import connect from "@/dbConfig/dbConfig";
-import { request } from "http";
 
 connect();
 
@@ -14,7 +13,6 @@ export async function GET(request: NextRequest) {
             message: "User found",
             data: user
         })
-        
     } catch (error:any) {
         return NextResponse.json({error: error.message}, {status: 400})
     }

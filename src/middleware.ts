@@ -6,7 +6,6 @@ export function middleware(request: NextRequest) {
     const path = request.nextUrl.pathname
 
     const isPublicPath = path === '/login' || path === '/signup'
-    const userPath = path === '/profile'
 
     // get the tokens from cookies
     const token = request.cookies.get('token')?.value || ''
@@ -22,11 +21,6 @@ export function middleware(request: NextRequest) {
     }
 
     // for profile
-
-    if(!userPath && !token) {
-        return NextResponse.redirect(new URL('/profile', request.nextUrl))
-    }
-
 }
  
 // See "Matching Paths" below to learn more
