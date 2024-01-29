@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation"; //To forcefully send the user to profile page
 import axios from "axios";
+import { useRouter } from "next/navigation"; //To forcefully send the user to profile page
 import {toast} from "react-hot-toast";
 
 
